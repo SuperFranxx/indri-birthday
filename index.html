@@ -1,0 +1,2362 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Indri's K-Pop Birthday Project ♡</title>
+
+
+<style>
+
+/* =========================================================
+   BASIC
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: #09090d;
+
+    color: white;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   COLOR
+========================================================= */
+
+:root {
+
+    --pink: #ff78aa;
+
+    --light-pink: #ffb8d4;
+
+    --purple: #9d7cff;
+
+    --dark: #09090d;
+
+    --card: #15151d;
+
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255,120,170,0.15),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(157,124,255,0.13),
+            transparent 30%
+        );
+
+    pointer-events: none;
+
+    z-index: -2;
+}
+
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+nav {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    padding: 18px 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background:
+        rgba(9,9,13,0.7);
+
+    backdrop-filter:
+        blur(15px);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.08);
+
+    z-index: 1000;
+}
+
+
+.logo {
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+.logo span {
+
+    color:
+        var(--pink);
+}
+
+
+nav a {
+
+    color: #888;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    margin-left: 18px;
+
+    transition: 0.3s;
+}
+
+
+nav a:hover {
+
+    color:
+        var(--pink);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+    position: relative;
+}
+
+
+.decor {
+
+    color:
+        var(--pink);
+
+    font-size: 20px;
+
+    letter-spacing: 8px;
+
+    margin-bottom: 25px;
+}
+
+
+.small-title {
+
+    color: #777;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+}
+
+
+.hero h1 {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(60px, 13vw, 130px);
+
+    line-height: 0.9;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--pink),
+            white,
+            var(--purple)
+        );
+
+    -webkit-background-clip:
+        text;
+
+    -webkit-text-fill-color:
+        transparent;
+
+    margin-bottom: 25px;
+}
+
+
+.hero h2 {
+
+    font-size: 17px;
+
+    font-weight: normal;
+
+    color: #aaa;
+
+    margin-bottom: 35px;
+}
+
+
+.hero h2 span {
+
+    color:
+        var(--pink);
+
+    font-weight: bold;
+}
+
+
+.open-button {
+
+    padding:
+        15px 32px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    border-radius:
+        50px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            var(--pink),
+            var(--purple)
+        );
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    box-shadow:
+        0 15px 40px
+        rgba(255,120,170,0.25);
+}
+
+
+.open-button:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 20px 50px
+        rgba(255,120,170,0.4);
+}
+
+
+.scroll {
+
+    position: absolute;
+
+    bottom: 25px;
+
+    color: #444;
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+}
+
+
+/* =========================================================
+   GENERAL SECTION
+========================================================= */
+
+section {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding:
+        100px 25px;
+}
+
+
+.label {
+
+    color:
+        var(--pink);
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 12px;
+
+    text-transform: uppercase;
+}
+
+
+.title {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(35px, 6vw, 55px);
+
+    margin-bottom: 12px;
+}
+
+
+.subtitle {
+
+    color: #666;
+
+    margin-bottom: 50px;
+}
+
+
+/* =========================================================
+   BIAS SECTION
+========================================================= */
+
+.bias-section {
+
+    min-height: 90vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+.bias-layout {
+
+    display: grid;
+
+    grid-template-columns:
+        360px 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* =========================================================
+   PHOTOCARD
+========================================================= */
+
+.photocard {
+
+    background: white;
+
+    padding:
+        10px 10px 25px;
+
+    border-radius: 8px;
+
+    transform:
+        rotate(-2deg);
+
+    box-shadow:
+        0 30px 70px
+        rgba(0,0,0,0.5);
+
+    transition: 0.4s;
+}
+
+
+.photocard:hover {
+
+    transform:
+        rotate(0deg)
+        scale(1.03);
+}
+
+
+.photocard img {
+
+    width: 100%;
+
+    height: 430px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.photocard-info {
+
+    text-align: center;
+
+    color: #222;
+
+    padding-top: 15px;
+}
+
+
+.photocard-info h3 {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 22px;
+}
+
+
+.photocard-info p {
+
+    color: #888;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    margin-top: 6px;
+}
+
+
+/* =========================================================
+   BIAS TEXT
+========================================================= */
+
+.bias-text h3 {
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+
+.bias-text p {
+
+    color: #999;
+
+    line-height: 1.9;
+
+    margin-bottom: 18px;
+}
+
+
+.tag {
+
+    display: inline-block;
+
+    padding:
+        7px 13px;
+
+    border:
+        1px solid
+        rgba(255,120,170,0.2);
+
+    border-radius:
+        50px;
+
+    color:
+        var(--pink);
+
+    font-size: 10px;
+
+    margin:
+        3px;
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.divider {
+
+    width: 100%;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,0.1),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.final {
+
+    min-height: 80vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+}
+
+
+.final h2 {
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(45px, 8vw, 80px);
+
+    background:
+
+        linear-gradient(
+            90deg,
+            var(--pink),
+            white,
+            var(--purple)
+        );
+
+    -webkit-background-clip:
+        text;
+
+    -webkit-text-fill-color:
+        transparent;
+}
+
+
+.final p {
+
+    max-width: 550px;
+
+    color: #777;
+
+    line-height: 1.8;
+
+    margin-top: 20px;
+}
+
+
+.heart {
+
+    font-size: 60px;
+
+    margin-top: 30px;
+
+    animation:
+        heartbeat 1.5s infinite;
+}
+
+
+@keyframes heartbeat {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+}
+
+
+/* =========================================================
+   FLOATING EFFECT
+========================================================= */
+
+.floating {
+
+    position: fixed;
+
+    bottom: -30px;
+
+    pointer-events: none;
+
+    z-index: 5000;
+
+    animation:
+        floatUp linear forwards;
+}
+
+
+@keyframes floatUp {
+
+    from {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    to {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    text-align: center;
+
+    padding:
+        50px 20px;
+
+    color: #444;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:750px) {
+
+    nav a {
+        display: none;
+    }
+
+
+    section {
+
+        padding:
+            80px 20px;
+    }
+
+
+    .bias-layout {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 45px;
+    }
+
+
+    .photocard {
+
+        max-width:
+            320px;
+
+        width: 100%;
+
+        margin: auto;
+    }
+
+
+    .photocard img {
+
+        height:
+            400px;
+    }
+
+
+    .bias-text {
+
+        text-align:
+            center;
+    }
+
+}
+
+/* =========================================================
+   SECRET BIAS
+========================================================= */
+
+.secret-gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 20px;
+}
+
+
+.secret-card {
+
+    height: 430px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        #111118;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.08);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 20px 50px
+        rgba(0,0,0,0.35);
+
+    transition:
+        0.4s;
+}
+
+
+.secret-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        rgba(255,120,170,0.35);
+
+    box-shadow:
+        0 25px 60px
+        rgba(255,120,170,0.15);
+}
+
+
+.secret-card img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    filter:
+        brightness(0.65);
+
+    transition:
+        0.5s;
+}
+
+
+.secret-card:hover img {
+
+    transform:
+        scale(1.06);
+
+    filter:
+        brightness(0.8);
+}
+
+
+.secret-number {
+
+    position: absolute;
+
+    top: 15px;
+
+    left: 15px;
+
+    z-index: 2;
+
+    padding:
+        6px 10px;
+
+    background:
+        rgba(0,0,0,0.65);
+
+    backdrop-filter:
+        blur(8px);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    border-radius:
+        5px;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color:
+        var(--pink);
+}
+
+
+.secret-overlay {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    padding:
+        70px 20px 25px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,0.9)
+        );
+}
+
+
+.secret-overlay span {
+
+    font-size: 9px;
+
+    letter-spacing: 4px;
+
+    color:
+        var(--pink);
+}
+
+
+.secret-overlay h3 {
+
+    margin-top: 8px;
+
+    font-family:
+        Georgia,
+        serif;
+
+    font-size: 25px;
+
+    letter-spacing: 3px;
+}
+
+
+.secret-message {
+
+    text-align: center;
+
+    margin-top: 45px;
+
+    padding:
+        20px;
+
+    border:
+        1px dashed
+        rgba(255,120,170,0.25);
+
+    border-radius:
+        8px;
+
+    background:
+        rgba(255,120,170,0.03);
+}
+
+
+.secret-message span {
+
+    color:
+        var(--pink);
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+
+.secret-message p {
+
+    margin-top: 10px;
+
+    color:
+        #666;
+
+    font-size: 12px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:750px) {
+
+    .secret-gallery {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .secret-card {
+
+        height:
+            450px;
+
+    }
+
+}
+
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+====================================================== -->
+
+<nav>
+
+    <div class="logo">
+
+        <span>♡</span>
+
+        BIRTHDAY PROJECT
+
+    </div>
+
+
+</nav>
+
+
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<div class="hero">
+
+
+    <div class="decor">
+
+        ✦ ｡ﾟ･: *✧･ﾟ:* ｡ﾟ･ ✦
+
+    </div>
+
+
+    <div class="small-title">
+
+        HAPPY BIRTHDAY TO
+
+    </div>
+
+
+    <!-- GANTI NAMA -->
+
+    <h1>
+
+        INDRI PUSPA DEWI
+
+    </h1>
+
+
+    <h2>
+
+        11 biases.
+        <span>
+            One special birthday. ♡
+        </span>
+
+    </h2>
+
+
+    <button
+        class="open-button"
+        onclick="startProject()"
+    >
+
+        OPEN MY GIFT 🎁
+
+    </button>
+
+
+    <div class="scroll">
+
+        SCROLL TO DISCOVER ↓
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     BIAS 01
+====================================================== -->
+
+<section
+    class="bias-section"
+    id="bias1"
+>
+
+
+    <div class="label">
+
+        01 — THE FIRST BIAS
+
+    </div>
+
+
+    <h2 class="title">
+
+        The Beginning ♡
+
+    </h2>
+
+
+    <p class="subtitle">
+
+        The one who started it all.
+
+    </p>
+
+
+    <div class="bias-layout">
+
+
+        <div class="photocard">
+
+            <img
+                src="foto/bias1.jpg"
+                alt="Bias 1"
+            >
+
+
+            <div class="photocard-info">
+
+                <h3>
+                    Joong Dunk
+                </h3>
+
+                <p>
+                    GMMTV
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="bias-text">
+
+            <h3>
+                Your First Bias ♡
+            </h3>
+
+
+            <p>
+
+Selamat ulang tahun, Indri! ♡
+Semoga hari spesialmu dipenuhi kebahagiaan, tawa, dan hal-hal kecil yang selalu berhasil membuatmu tersenyum. Kamu pantas mendapatkan semua hal baik di dunia ini!
+            </p>
+
+
+    
+
+
+            <span class="tag">
+                ♡ BIAS #01
+            </span>
+
+            <span class="tag">
+                ✦ FAVORITE
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<div class="divider"></div>
+
+
+
+<!-- =====================================================
+     BIAS 02
+====================================================== -->
+
+<section
+    class="bias-section"
+    id="bias2"
+>
+
+
+    <div class="label">
+
+        02 — THE ONE WHO STOLE MY HEART
+
+    </div>
+
+
+    <h2 class="title">
+
+        Bias Number Two ♡
+
+    </h2>
+
+
+    <p class="subtitle">
+
+        Somehow, they became another favorite.
+
+    </p>
+
+
+    <div class="bias-layout">
+
+
+        <div class="photocard">
+
+            <img
+                src="foto/bias2.jpg"
+                alt="Bias 2"
+            >
+
+
+            <div class="photocard-info">
+
+                <h3>
+                    Earth Mix
+                </h3>
+
+                <p>
+                    GMMTV
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="bias-text">
+
+            <h3>
+                The Heart Stealer ♡
+            </h3>
+
+
+            <p>
+
+Selamat ulang tahun, Indri!
+Semoga di usia yang baru ini, kamu menemukan lebih banyak kebahagiaan, bertemu orang-orang baik, dan menciptakan banyak kenangan indah yang akan selalu kamu ingat.
+            </p>
+
+
+
+            <span class="tag">
+                ♡ BIAS #02
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<div class="divider"></div>
+
+
+
+<!-- =====================================================
+     BIAS 03
+====================================================== -->
+
+<section
+    class="bias-section"
+    id="bias3"
+>
+
+
+    <div class="label">
+
+        03 — THE ULTIMATE BIAS
+
+    </div>
+
+
+    <h2 class="title">
+
+        The Ultimate ♡
+
+    </h2>
+
+
+    <p class="subtitle">
+
+        The one who holds a special place.
+
+    </p>
+
+
+    <div class="bias-layout">
+
+
+        <div class="photocard">
+
+            <img
+                src="foto/bias3.jpg"
+                alt="Bias 3"
+            >
+
+
+            <div class="photocard-info">
+
+                <h3>
+                    pod phuin
+                </h3>
+
+                <p>
+                    GMMTV
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="bias-text">
+
+            <h3>
+                The Ultimate Bias.
+            </h3>
+
+
+            <p>
+
+               Happy Birthday, Indri! ♡
+Hari ini kamu nggak boleh sedih, ya! Makan kue yang banyak, tersenyum sebanyak-banyaknya, dan nikmati setiap momen di hari spesialmu. Semoga ulang tahunmu menyenangkan!
+
+            </p>
+
+
+
+            <span class="tag">
+                ♡ BIAS #03
+            </span>
+
+            <span class="tag">
+                ★ ULTIMATE
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<div class="divider"></div>
+
+
+
+<!-- =====================================================
+     BIAS 04
+====================================================== -->
+
+<section
+    class="bias-section"
+    id="bias4"
+>
+
+
+    <div class="label">
+
+        04 — THE BIAS WRECKER
+
+    </div>
+
+
+    <h2 class="title">
+
+        The Bias Wrecker ♡
+
+    </h2>
+
+
+    <p class="subtitle">
+
+        The one who makes everything complicated.
+
+    </p>
+
+
+    <div class="bias-layout">
+
+
+        <div class="photocard">
+
+            <img
+                src="foto/bias4.jpg"
+                alt="Bias 4"
+            >
+
+
+            <div class="photocard-info">
+
+                <h3>
+                    Joss gawin
+                </h3>
+
+                <p>
+                    GMMTV
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="bias-text">
+
+            <h3>
+                Why are you like this? 😭
+            </h3>
+
+
+            <p>
+
+               Selamat ulang tahun, Indri!
+Apa pun yang akan kamu hadapi ke depannya, jangan pernah berhenti percaya pada dirimu sendiri. Kejar apa yang kamu inginkan dan jangan takut untuk bermimpi besar. Aku akan selalu mendukungmu!
+
+            </p>
+
+
+            <span class="tag">
+                ♡ BIAS #04
+            </span>
+
+            <span class="tag">
+                ⚠ BIAS WRECKER
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<div class="divider"></div>
+
+
+
+<!-- =====================================================
+     BIAS 05
+====================================================== -->
+
+<section
+    class="bias-section"
+    id="bias5"
+>
+
+
+    <div class="label">
+
+        05 — THE SUNSHINE
+
+    </div>
+
+
+    <h2 class="title">
+
+        Your Sunshine ♡
+
+    </h2>
+
+
+    <p class="subtitle">
+
+        The one who makes everything brighter.
+
+    </p>
+
+
+    <div class="bias-layout">
+
+
+        <div class="photocard">
+
+            <img
+                src="foto/bias5.jpg"
+                alt="Bias 5"
+            >
+
+
+            <div class="photocard-info">
+
+                <h3>
+                    Fort Peat
+                </h3>
+
+                <p>
+                    GMMTV
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="bias-text">
+
+            <h3>
+                Your Sunshine ☀
+            </h3>
+
+
+            <p>
+
+                Selamat ulang tahun, Indri. ♡
+Terima kasih sudah bertahan dan berhasil sampai sejauh ini. Mungkin kamu nggak selalu menyadarinya, tapi kamu jauh lebih berharga daripada yang kamu kira. Semoga hari-hari ke depan menjadi lebih indah untukmu.
+
+            </p>
+
+
+            <span class="tag">
+                ♡ BIAS #05
+            </span>
+
+            <span class="tag">
+                ☀ SUNSHINE
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<div class="divider"></div>
+
+
+
+<!-- =====================================================
+     BIAS 06
+====================================================== -->
+
+<section
+    class="bias-section"
+    id="bias6"
+>
+
+
+    <div class="label">
+
+        06 — THE VISUAL
+
+    </div>
+
+
+    <h2 class="title">
+
+        The Visual ♡
+
+    </h2>
+
+
+    <p class="subtitle">
+
+        The one who always catches your attention.
+
+    </p>
+
+
+    <div class="bias-layout">
+
+
+        <div class="photocard">
+
+            <img
+                src="foto/bias6.jpg"
+                alt="Bias 6"
+            >
+
+
+            <div class="photocard-info">
+
+                <h3>
+                    Auau Save 
+                </h3>
+
+                <p>
+                    GMMTV
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="bias-text">
+
+            <h3>
+                The Visual.
+            </h3>
+
+
+            <p>
+Selamat ulang tahun, Indri! 🎂
+Hari ini kamu resmi jadi pemeran utama! Lupakan semua masalah untuk sementara, makan makanan favoritmu, ambil banyak foto, dan nikmati harimu sepuasnya. Jangan lupa bahagia!
+
+            </p>
+
+
+            <span class="tag">
+                ♡ BIAS #06
+            </span>
+
+            <span class="tag">
+                ✦ VISUAL
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<div class="divider"></div>
+
+
+
+<!-- =====================================================
+     BIAS 07
+====================================================== -->
+
+<section
+    class="bias-section"
+    id="bias7"
+>
+
+
+    <div class="label">
+
+        07 — THE COMFORT IDOL
+
+    </div>
+
+
+    <h2 class="title">
+
+        Your Comfort ♡
+
+    </h2>
+
+
+    <p class="subtitle">
+
+        The one who makes bad days feel better.
+
+    </p>
+
+
+    <div class="bias-layout">
+
+
+        <div class="photocard">
+
+            <img
+                src="foto/bias7.jpg"
+                alt="Bias 7"
+            >
+
+
+            <div class="photocard-info">
+
+                <h3>
+                    Tay New
+                </h3>
+
+                <p>
+                    GMMTV
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="bias-text">
+
+            <h3>
+                Your Comfort Idol.
+            </h3>
+
+
+            <p>
+
+             Selamat ulang tahun, Indri.
+Semoga tahun ini kehidupan memperlakukanmu dengan lebih lembut. Semoga kamu menemukan ketenangan dalam hal-hal sederhana dan kebahagiaan di tempat-tempat yang tidak pernah kamu duga.
+
+            </p>
+
+
+            <span class="tag">
+                ♡ BIAS #07
+            </span>
+
+            <span class="tag">
+                ☁ COMFORT
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<div class="divider"></div>
+
+
+
+<!-- =====================================================
+     BIAS 08
+====================================================== -->
+
+<section
+    class="bias-section"
+    id="bias8"
+>
+
+
+    <div class="label">
+
+        08 — THE STAGE GENIUS
+
+    </div>
+
+
+    <h2 class="title">
+
+        Born To Perform ♡
+
+    </h2>
+
+
+    <p class="subtitle">
+
+        The one who owns the stage.
+
+    </p>
+
+
+    <div class="bias-layout">
+
+
+        <div class="photocard">
+
+            <img
+                src="foto/bias8.jpg"
+                alt="Bias 8"
+            >
+
+
+            <div class="photocard-info">
+
+                <h3>
+                    Jems
+                </h3>
+
+                <p>
+                    GMMTV
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="bias-text">
+
+            <h3>
+                Stage Genius.
+            </h3>
+
+
+            <p>
+
+          Selamat ulang tahun, Indri! ♡
+Terima kasih sudah memberikan begitu banyak cinta dan dukungan. Semoga aku juga bisa terus memberikan kebahagiaan untukmu, sama seperti kamu yang selalu memberikan kebahagiaan kepadaku.
+            </p>
+
+
+            <span class="tag">
+                ♡ BIAS #08
+            </span>
+
+            <span class="tag">
+                ★ PERFORMER
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<div class="divider"></div>
+
+
+
+<!-- =====================================================
+     BIAS 09
+====================================================== -->
+
+<section
+    class="bias-section"
+    id="bias9"
+>
+
+
+    <div class="label">
+
+        09 — THE CUTIE
+
+    </div>
+
+
+    <h2 class="title">
+
+        The Cutie ♡
+
+    </h2>
+
+
+    <p class="subtitle">
+
+        The one who makes you say "aww".
+
+    </p>
+
+
+    <div class="bias-layout">
+
+
+        <div class="photocard">
+
+            <img
+                src="foto/bias9.jpg"
+                alt="Bias 9"
+            >
+
+
+            <div class="photocard-info">
+
+                <h3>
+                    Gulf
+                </h3>
+
+                <p>
+                    GMMTV
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="bias-text">
+
+            <h3>
+                Too Cute. ♡
+            </h3>
+
+
+            <p>
+
+           Selamat ulang tahun, Indri!
+Satu tahun lagi telah berlalu dan satu babak baru akan dimulai. Semoga babak baru ini dipenuhi cerita indah, pengalaman berharga, dan impian yang perlahan menjadi kenyataan.
+            </p>
+
+
+            <span class="tag">
+                ♡ BIAS #09
+            </span>
+
+            <span class="tag">
+                ୨୧ CUTIE
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<div class="divider"></div>
+
+
+
+<!-- =====================================================
+     BIAS 10
+====================================================== -->
+
+<section
+    class="bias-section"
+    id="bias10"
+>
+
+
+    <div class="label">
+
+        10 — THE ONE I CAN'T RESIST
+
+    </div>
+
+
+    <h2 class="title">
+
+        Impossible To Resist ♡
+
+    </h2>
+
+
+    <p class="subtitle">
+
+        Somehow, they always win.
+
+    </p>
+
+
+    <div class="bias-layout">
+
+
+        <div class="photocard">
+
+            <img
+                src="foto/bias10.jpg"
+                alt="Bias 10"
+            >
+
+
+            <div class="photocard-info">
+
+                <h3>
+                    Zeenew
+                </h3>
+
+                <p>
+                    GMMTV
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="bias-text">
+
+            <h3>
+                I Can't Resist. 😭
+            </h3>
+
+
+            <p>
+
+            Selamat ulang tahun, Indri. ♡
+Semoga langkahmu selalu dimudahkan, hatimu selalu dipenuhi kebahagiaan, dan semua impian yang kamu simpan perlahan menemukan jalannya untuk menjadi nyata.
+
+            </p>
+
+
+            <span class="tag">
+                ♡ BIAS #10
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<div class="divider"></div>
+
+
+
+<!-- =====================================================
+     BIAS 11
+====================================================== -->
+
+<section
+    class="bias-section"
+    id="bias11"
+>
+
+
+    <div class="label">
+
+        11 — THE FINAL BIAS
+
+    </div>
+
+
+    <h2 class="title">
+
+        The Final One ♡
+
+    </h2>
+
+
+    <p class="subtitle">
+
+        And finally... number eleven.
+
+    </p>
+
+
+    <div class="bias-layout">
+
+
+        <div class="photocard">
+
+            <img
+                src="foto/bias11.jpg"
+                alt="Bias 11"
+            >
+
+
+            <div class="photocard-info">
+
+                <h3>
+                    Sky Nani
+                </h3>
+
+                <p>
+                    GMMTV
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="bias-text">
+
+            <h3>
+                The Final Bias. ♡
+            </h3>
+
+
+            <p>
+Selamat ulang tahun, Indri! ♡
+Di hari spesialmu ini, aku hanya ingin mengingatkanmu bahwa kamu pantas mendapatkan segala kebahagiaan yang ada. Tetaplah tersenyum, teruslah bermimpi, dan jangan pernah berhenti menjadi dirimu sendiri.  
+Semoga tahun ini menjadi salah satu babak paling indah dalam hidupmu. Selamat ulang tahun sekali lagi, Indri! ♡
+
+            </p>
+
+
+            <span class="tag">
+                ♡ BIAS #11
+            </span>
+
+            <span class="tag">
+                ✦ FINAL
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     SECTION 12 — SECRET BIASES
+====================================================== -->
+
+<section class="bias-section" id="secret-bias">
+
+    <div class="label">
+        12 — CLASSIFIED
+    </div>
+
+    <h2 class="title">
+        The Ones We Can't Mention ♡
+    </h2>
+
+    <p class="subtitle">
+        Some biases are better left unnamed...
+    </p>
+
+
+    <!-- 3 FOTO -->
+
+    <div class="secret-gallery">
+
+
+        <!-- FOTO 1 -->
+
+        <div class="secret-card">
+
+            <div class="secret-number">
+                #01
+            </div>
+
+            <img
+                src="foto/secret1.jpg"
+                alt="All"
+            >
+
+            <div class="secret-overlay">
+
+                <span>
+                    HAPPY
+                </span>
+
+        
+            </div>
+
+        </div>
+
+
+
+        <!-- FOTO 2 -->
+
+        <div class="secret-card">
+
+            <div class="secret-number">
+                #02
+            </div>
+
+            <img
+                src="foto/secret2.jpg"
+                alt="GMMTV"
+            >
+
+            <div class="secret-overlay">
+
+                <span>
+                    BIRTHDAY
+                </span>
+
+            
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FOTO 3 -->
+
+        <div class="secret-card">
+
+            <div class="secret-number">
+                #03
+            </div>
+
+            <img
+                src="foto/secret3.jpg"
+                alt="Bias"
+            >
+
+            <div class="secret-overlay">
+
+                <span>
+                    INDRI
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     FINAL
+====================================================== -->
+
+<section class="final">
+
+
+    <div class="decor">
+
+        ✦ ♡ ✦
+
+    </div>
+
+
+    <div class="small-title">
+
+        11 BIASES • 1 SPECIAL PERSON
+
+    </div>
+
+
+    <h2>
+
+        Happy Birthday 
+        Indri♡
+
+    </h2>
+
+
+    <p>
+
+        May your new chapter be filled
+        with beautiful memories,
+        happiness, good music,
+        and all your favorite people
+        and idols. ♡
+
+    </p>
+
+
+    <div class="heart">
+
+        ♡
+
+    </div>
+
+</section>
+
+
+
+<footer>
+
+    Made with ♡ for Indri
+
+    <br><br>
+
+    K-POP BIRTHDAY PROJECT • 2026
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+====================================================== -->
+
+<script>
+
+
+function startProject() {
+
+    document
+        .getElementById("bias1")
+        .scrollIntoView({
+
+            behavior:
+                "smooth"
+
+        });
+
+
+    createHearts();
+
+}
+
+
+
+function createHearts() {
+
+
+    const symbols = [
+
+        "♡",
+        "♥",
+        "✦",
+        "✨",
+        "୨୧"
+
+    ];
+
+
+    for (
+        let i = 0;
+        i < 35;
+        i++
+    ) {
+
+
+        setTimeout(
+            function() {
+
+
+                const element =
+                    document.createElement("div");
+
+
+                element.className =
+                    "floating";
+
+
+                element.innerHTML =
+                    symbols[
+                        Math.floor(
+                            Math.random()
+                            *
+                            symbols.length
+                        )
+                    ];
+
+
+                element.style.left =
+                    Math.random()
+                    * 100
+                    + "vw";
+
+
+                element.style.fontSize =
+                    (
+                        12
+                        +
+                        Math.random()
+                        * 25
+                    )
+                    + "px";
+
+
+                element.style.color =
+                    Math.random() > 0.5
+
+                    ? "var(--pink)"
+
+                    : "var(--purple)";
+
+
+                element.style.animationDuration =
+                    (
+                        3
+                        +
+                        Math.random()
+                        * 4
+                    )
+                    + "s";
+
+
+                document
+                    .body
+                    .appendChild(element);
+
+
+                setTimeout(
+                    function() {
+
+                        element.remove();
+
+                    },
+                    7000
+                );
+
+
+            },
+            i * 80
+        );
+
+    }
+
+}
+
+</script>
+
+
+</body>
+
+</html>
